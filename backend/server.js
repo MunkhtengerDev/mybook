@@ -53,6 +53,10 @@ app.use("/api/v1/auth", authRoutes)
 app.use(googleRoutes)
 app.use("/api/v1/book", bookRoutes)
 
+app.get("/", (req, res) => {
+  res.send("APP IS RUNNING!")
+})
+
 
 
 //Port 
