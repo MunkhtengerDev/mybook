@@ -32,7 +32,11 @@ connectDB()
 const app = express();
 
 
-app.use(cors());
+app.use(cors({
+  origin: ["https://mybook-client.vercel.app/"],
+  methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
+  credentials: true
+}));
 // app.use(express.json());
 app.use(bodyParser.json({ limit: "30mb", extended: false }))
 app.use(bodyParser.urlencoded({ extended: true }))
