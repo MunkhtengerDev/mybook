@@ -33,7 +33,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: ["https://mybook-client.vercel.app"],
+  origin: ["https://mybook-client.vercel.app/"],
   methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
   credentials: true
 }));
